@@ -18,7 +18,7 @@ const Todos = ({ todos, deleteTodo }) => {
             {/* Remember, we set the local state of this todo item when the user submits the form in 
             AddTodo.js. All we need to do is return the todo list item {todo.content} */}
               <ListItemButton component="a" href="#simple-list">
-                <Checkbox style={{paddingLeft:0}} color="primary" onClick={() => deleteTodo(todo.id)}/> {/* need to check style and onClick*/}
+                <Checkbox style={{paddingLeft:0}} color="primary" onClick={() => deleteTodo(todo.id)}/> {/* don't need this.deleteTodo since passed in as prop(parameter)*/}
                 <ListItemText primary={todo.content} secondary={todo.date}/>
               </ListItemButton>
           </Card>

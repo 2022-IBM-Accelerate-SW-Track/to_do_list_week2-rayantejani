@@ -20,7 +20,7 @@ class Home extends Component {
     // This solution works for a small application but a more complex hashing function should be used when
     // dealing with a larger data sensitive project.
 
-    const exists = this.state.todos.find((item) => item.content === todo.content);
+    const exists = this.state.todos.find((item) => item.content === todo.content); // check if todo already exists (compares content string values)
     if (!exists) {
     
     todo.id = Math.random();
